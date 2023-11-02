@@ -1,0 +1,28 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+    margin: 0; /* Remove default margin to prevent spacing */
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a.login {
+    float: right;
+}
+
+h1 {
+    margin-top: 100px; /* Adjust this value to center the title vertically */
+}
+
