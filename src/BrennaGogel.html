@@ -10,28 +10,29 @@
         }
         .navbar {
             display: flex;
-            justify-content: space-between;
-            background-color: #333;
-            color: white;
+            justify-content: flex-end;
             padding: 10px;
+            background-color: #333;
         }
         .navbar a {
             color: white;
             text-decoration: none;
-            padding: 14px 20px;
+            padding: 14px 16px;
+            margin: 0 10px; /* This gives spacing between the links */
         }
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
+        .navbar a:not(.login):not(.home) {
+            margin-right: auto; /* This pushes all other links to the left */
         }
         h1 {
             color: #0044cc;
             text-align: center;
         }
         .content {
+            min-height: calc(100% - 60px);
             max-width: 800px;
             margin: auto;
             text-align: center;
+            padding-bottom: 50px;
         }
         .portrait {
             display: block;
@@ -44,22 +45,34 @@
             padding: 20px;
         }
         .footer {
-            font-size: 24px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 60px; /* Set the fixed height of the footer here */
+            background-color: #333;
+            color: white;
             text-align: center;
-            margin-top: 40px;
-            font-weight: bold;
+            line-height: 60px; /* Center the text vertically */
+            padding: 10px 0;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
         }
     </style>
 </head>
 <body>
 <div class="navbar">
     <a href="index.html">Home</a>
-    <a href="register.html">Register</a>
-    <a class="login" href="login.html">Login In</a>
+    <div class="right-links">
+        <a href="register.html">Register</a>
+        <a class="login" href="login.html">Login In</a>
+    </div>
 </div>
 <div class="content">
     <h1>Brenna Gogel</h1>
-    <img src="images/Brenna.jpg" alt="Brenna Gogel" class="portrait">
+    <img src="/images/Brenna.jpg" alt="Brenna Gogel" class="portrait">
     <div class="bio">
         <p>I'm currently a fourth year at the University of Iowa. I grew up very close, in Ely, Iowa. I attended elementary through high school at Solon. Growing up I've always enjoyed math and reading a good book!</p>
         <p>At the University of Iowa I'm majoring in Computer Science and Engineering. I chose this major while in high school. I took a class at Kirkwood community college during my senior year over C++ and Matlab and loved programming. That class showed me that this was what I wanted to study.</p>
