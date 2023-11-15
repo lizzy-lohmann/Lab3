@@ -31,7 +31,23 @@ body {
     margin-right: auto;
 }
 
-
+.content {
+    min-height: calc(100% - 60px);
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.portrait {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.bio {
+    text-align: left;
+    padding: 20px;
+}
 
 .footer {
     position: fixed;
