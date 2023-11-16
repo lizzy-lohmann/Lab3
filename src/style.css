@@ -2,6 +2,7 @@ body {
     background-color: white;
     text-align: center;
     top-margin: 50; /* Remove default margin to prevent spacing */
+    bottom-margin: 60px;
 }
 
 
