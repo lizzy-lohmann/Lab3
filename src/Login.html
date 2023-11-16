@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        form {
+            width: 300px;
+            margin: 50px auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="./index.html" class="home">Home</a>
+  <a href="./Register.html" class="register">Register</a>
+  <a href=".Login.html" class="login">Login</a>
+</div>
+<div class="footer">
+  ECE: 4880 Senior Design
+</div>
+
+<form>
+  <h2>Login</h2>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <input type="checkbox" onclick="showPassword()"> Show Password
+
+  <br><br>
+
+  <input type="button" value="Login" onclick="login()">
+</form>
+
+<script>
+        function showPassword() {
+            var passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // You can add your login logic here
+            // For demonstration, we'll just log the entered values
+            console.log("Username: " + username);
+            console.log("Password: " + password);
+        }
+    </script>
+
+</body>
+</html>
