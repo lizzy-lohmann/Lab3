@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Justin's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="navbar">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('register') }}">Register</a>
+    <a class="login" href="{{ url_for('login') }}">Login</a>
+</div>
+    <h1>Justin's Portfolio</h1>
+    <img src="{{ url_for('static', filename='images/Justin.jpg') }}" alt="Justin" width="135" height="211">
+
+    <!-- Comment Form -->
+    <form action="{{ url_for('add_comment', page='justin_schumacher') }}" method="post">
+        <label for="comment">Add a comment:</label>
+        <textarea name="comment" id="comment" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Display Comments -->
+    <h2>Comments:</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

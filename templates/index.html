@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CTRL+C Heroes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .portfolio-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            flex-wrap: wrap; /* Allows items to wrap to next line on small screens */
+        }
+
+        .portfolio-item {
+            width: auto; /* Adjust the width as needed */
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .portfolio-image img {
+            width: auto; /* Ensures image is not larger than the container */
+            height: 350px; /* Keeps the image aspect ratio */
+            display: block; /* Removes extra space below the image */
+            margin-bottom: 10px; /* Space between the image and the name */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('register') }}">Register</a>
+        <a class="login" href="{{ url_for('login') }}">Login</a>
+    </div>
+
+    <h1>Ctrl+C Heros</h1>
+
+    <div class="portfolio-container">
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+                <img src="/images/Justin.jpg" alt="Chase Dittmer">
+            </div>
+        <a href="{{ url_for('chase_dittmer') }}">Chase Dittmer</a>
+        </div>
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+                <img src="{{ url_for('static', filename='images/Brenna.jpg') }}" alt="Justin" width="135" height="211">
+            </div>
+        <a href="{{ url_for('brenna_gogel') }}">Brenna Gogel</a>
+        </div>
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+                <img src="{{ url_for('static', filename='images/lizzy.jpg') }}" alt="Justin" width="135" height="211">
+            </div>
+        <a href="{{ url_for('lizzy_lohmann') }}">Lizzy's Portfolio</a>
+        </div>
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+                <img src="{{ url_for('static', filename='images/Justin.jpg') }}" alt="Justin" width="135" height="211">
+            </div>
+        <a href="{{ url_for('justin_schumacher') }}">Justin's Portfolio</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        ECE: 4880 Senior Design
+    </div>
+
+
+
+
+
+<!--    <p style="font-size: 20px; color:#1F9AFE;">-->
+<!--        <a href="{{ url_for('justin_schumacher') }}">Justin's Portfolio</a>-->
+<!--        <a href="{{ url_for('lizzy_lohmann') }}">Lizzy's Portfolio</a>-->
+<!--    </p>-->
+</body>
+</html>
