@@ -1,11 +1,24 @@
+import ssl
+
+import certifi
 from flask import Flask, render_template, request, redirect, url_for
-from pymongo import MongoClient
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 
 app = Flask(__name__, static_folder='templates/static')
 
 # Connect to MongoDB
-client = MongoClient('mongodb://localhost:27017/')
-db = client['Lab3']  # Use 'Lab3' as the database name
+uri = "mongodb+srv://justin:test@lab3.swakhcz.mongodb.net/?retryWrites=true&w=majority"
+
+
+client = MongoClient(uri, server_api=ServerApi('1'), tls=True, tlsCAFile=certifi.where())
+try:
+    client.admin.command('ping')
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
+
+db = client.get_database('Lab3')  # Specify the database name
 collection = db['users']  # Use 'users' as the collection name
 
 # Initialize a dictionary to store comments for each page
@@ -64,7 +77,11 @@ def register():
             'username': username,
             'password': password,
         }
-        collection.insert_one(new_data)
+        try:
+            collection.insert_one(new_data)
+            print("User inserted successfully")
+        except Exception as e:
+            print(f"Error inserting user data: {e}")
 
         # Redirect to the index or login page after successful registration
         return redirect(url_for('index'))
