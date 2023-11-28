@@ -46,11 +46,31 @@ def chase_dittmer():
     return render_template('ChaseDittmer.html', comments=comments)
 
 
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register():
-    # Your code here
-    return render_template('register.html')
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
 
+        # Check if the username already exists in the database
+        existing_user = collection.find_one({'username': username})
+
+        if existing_user:
+            # Username already exists, you can provide an error message or redirect to a registration error page
+            return render_template('register.html', error='Username already exists. Please choose another username.')
+
+        # If the username is not in the database, add the new user
+        new_data = {
+            'username': username,
+            'password': password,
+        }
+        collection.insert_one(new_data)
+
+        # Redirect to the index or login page after successful registration
+        return redirect(url_for('index'))
+
+    # If the request method is GET, render the registration form
+    return render_template('register.html')
 @app.route('/login')
 def login():
     # Your code here
