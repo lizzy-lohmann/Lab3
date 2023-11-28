@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea4b93e0-b5f6-4b45-989c-ee3d29d6d4ed" name="Changes" comment="" />
+    <list default="true" id="ea4b93e0-b5f6-4b45-989c-ee3d29d6d4ed" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +46,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\chase\OneDrive\Documents\GitHub\Lab3\src\static" />
+      <recent name="C:\Users\chase\OneDrive\Documents\GitHub\Lab3\src\templates" />
+      <recent name="C:\Users\chase\OneDrive\Documents\GitHub\Lab3\src" />
       <recent name="C:\Users\chase\OneDrive\Documents\GitHub\Lab3" />
     </key>
   </component>
