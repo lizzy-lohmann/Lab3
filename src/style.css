@@ -8,7 +8,8 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Aligns children with space between */
+    justify-content: space-between;
+    align-items: center;
     background-color: hsl(195, 60%, 67%);
     padding: 10px;
     font-size: 25px;
