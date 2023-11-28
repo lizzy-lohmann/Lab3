@@ -52,7 +52,19 @@
             <p>I'm still unsure about what I want to do in my future. Currently I'm taking a class, Modern Databases, where we've worked in PostgreSQL, MongoDB, Neo4j, and Redis. I've enjoyed working with these databases and have thought about looking into a data analysis job.</p>
         </div>
     </div>
+    <form action="{{ url_for('add_comment', page='brenna_gogel') }}" method="post">
+        <label for="comment">Add a comment:</label>
+        <textarea name="comment" id="comment" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
 
+    <h2>Comments:</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment }}</li>
+        {% endfor %}
+    </ul>
     <div class="footer">
         ECE: 4880 Senior Design
   </div>
