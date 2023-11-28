@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <title>Justin Schumacher</title>
+    <title>Lizzy's Portfolio</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <style>
         body {
@@ -15,7 +14,7 @@
             padding: 20px;
         }
         .left-column {
-            width: 15%;
+            width: 20%;
             padding-right: 30px;
         }
         .right-column {
@@ -32,31 +31,42 @@
             height: 100%;
             margin: 0;
         }
-
     </style>
 </head>
 <body>
 <div class="navbar">
-
-    <a href="index.html">Home</a>
-    <div class="right-links">
-        <a href="register.html">Register</a>
-        <a class="login" href="login.html">Login In</a>
+        <a href="{{ url_for('index') }}">Home</a>
+        <div class="right-links">
+            <a href="{{ url_for('register') }}">Register</a>
+            <a class="login" href="{{ url_for('login') }}">Login In</a>
+        </div>
     </div>
-</div>
-<h1>Justin Schumacher</h1>
+<h1>Lizzy Lohmann</h1>
 <div class="content">
     <div class="left-column">
-        <img src="/images/Justin.jpg" alt="Justin Schumacher" >
+        <img src="/static/images/Lizzy.jpg" alt="Lizzy Lohmann" >
     </div>
     <div class="right-column">
-        <p>bluh bluh </p>
+        <p> bluh bluh </p>
     </div>
 </div>
-    </div>
+<form action="{{ url_for('add_comment', page='lizzy_lohmann') }}" method="post">
+        <label for="comment">Add a comment:</label>
+        <textarea name="comment" id="comment" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Display Comments -->
+    <h2>Comments:</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment }}</li>
+        {% endfor %}
+    </ul>
 <div class="footer">
     ECE: 4880 Senior Design
-</div>
+  </div>
 
 
 </body>
