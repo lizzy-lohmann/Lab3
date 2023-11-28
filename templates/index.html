@@ -13,21 +13,26 @@
             display: flex;
             justify-content: space-around;
             padding: 50px;
-            flex-wrap: wrap; /* Allows items to wrap to next line on small screens */
+            flex-wrap: wrap;
+            flex: 1;
         }
 
         .portfolio-item {
-            width: auto; /* Adjust the width as needed */
+            width: auto;
             margin-bottom: 20px;
             text-align: center;
             font-size: 30px;
         }
 
         .portfolio-image img {
-            width: auto; /* Ensures image is not larger than the container */
-            height: 350px; /* Keeps the image aspect ratio */
-            display: block; /* Removes extra space below the image */
-            margin-bottom: 10px; /* Space between the image and the name */
+            width: auto;
+            height: 350px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
         }
     </style>
 </head>
