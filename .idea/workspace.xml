@@ -4,7 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea4b93e0-b5f6-4b45-989c-ee3d29d6d4ed" name="Changes" comment="" />
+    <list default="true" id="ea4b93e0-b5f6-4b45-989c-ee3d29d6d4ed" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettingstarted/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/gettingstarted/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gettingstarted/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/gettingstarted/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/static/lang-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/lang-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/templates/BrennaGogel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/BrennaGogel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/templates/ChaseDittmer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/templates/JustinSchumacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/JustinSchumacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/templates/LizzyLohmann.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/templates/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/templates/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/templates/db.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/db.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Brenna.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Brenna.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Justin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Justin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/chase.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/chase.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lizzy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/lizzy.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BrennaGogel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChaseDittmer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/ChaseDittmer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JustinSchumacher.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LizzyLohmann.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/LizzyLohmann.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,8 +72,14 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "chase2",
-    "last_opened_file_path": "C:/Users/chase/OneDrive/Documents/GitHub/Lab3"
+    "last_opened_file_path": "C:/Users/chase/OneDrive/Documents/GitHub/Lab3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -44,8 +87,10 @@
       <recent name="C:\Users\chase\OneDrive\Documents\GitHub\Lab3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\chase\OneDrive\Documents\GitHub\Lab3\src" />
+      <recent name="C:\Users\chase\OneDrive\Documents\GitHub\Lab3\src\static" />
+      <recent name="C:\Users\chase\OneDrive\Documents\GitHub\Lab3\hello" />
       <recent name="C:\Users\chase\OneDrive\Documents\GitHub\Lab3" />
+      <recent name="C:\Users\chase\OneDrive\Documents\GitHub\Lab3\src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -56,7 +101,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698951578197</updated>
+      <workItem from="1701187356430" duration="617000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
