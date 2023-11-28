@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Brenna Gogel</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,17 +14,17 @@
             padding: 20px;
         }
         .left-column {
-            width: 20%; 
-            padding-right: 20px; 
+            width: 15%;
+            padding-right: 30px;
         }
         .right-column {
-            width: 60%; 
+            width: 60%;
             text-align: left; 
         }
         .left-column img {
-            width: 100%; 
+            width: 100%;
             height: auto;
-            display: block; 
+            display: block;
         }
 
         body, html {
@@ -35,16 +35,16 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="index.html">Home</a>
+        <a href="{{ url_for('index') }}">Home</a>
         <div class="right-links">
-            <a href="register.html">Register</a>
-            <a class="login" href="login.html">Login In</a>
+            <a href="{{ url_for('register') }}">Register</a>
+            <a class="login" href="{{ url_for('login') }}">Login In</a>
         </div>
     </div>
     <h1>Brenna Gogel</h1>
     <div class="content">
         <div class="left-column">
-        <img src="/images/Brenna.jpg" alt="Brenna Gogel" >
+        <img src="/static/images/Brenna.jpg" alt="Brenna Gogel" >
         </div>
         <div class="right-column">
             <p>I'm currently a fourth year at the University of Iowa. I grew up very close, in Ely, Iowa. I attended elementary through high school at Solon. Growing up I've always enjoyed math and reading a good book!</p>

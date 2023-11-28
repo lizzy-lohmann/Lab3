@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CTRL+C Heroes</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,52 +32,46 @@
     </style>
 </head>
 <body>
+
     <div class="navbar">
         <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('register') }}">Register</a>
-        <a class="login" href="{{ url_for('login') }}">Login</a>
+        <div class="right-links">
+            <a href="{{ url_for('register') }}">Register</a>
+            <a class="login" href="{{ url_for('login') }}">Login In</a>
+        </div>
     </div>
 
-    <h1>Ctrl+C Heros</h1>
+    <h1>Ctrl+C Heroes</h1>
 
     <div class="portfolio-container">
         <div class="portfolio-item">
             <div class="portfolio-image">
-                <img src="/images/Justin.jpg" alt="Chase Dittmer">
+                <img src="/static/images/chase.jpg" alt="Chase Dittmer">
             </div>
-        <a href="{{ url_for('chase_dittmer') }}">Chase Dittmer</a>
+            <a href="{{ url_for('chase_dittmer') }}">Chase's Portfolio'</a>
         </div>
         <div class="portfolio-item">
             <div class="portfolio-image">
-                <img src="{{ url_for('static', filename='images/Brenna.jpg') }}" alt="Justin" width="135" height="211">
+                <img src="/static/images/Brenna.jpg" alt="Brenna Gogel">
             </div>
-        <a href="{{ url_for('brenna_gogel') }}">Brenna Gogel</a>
+            <a href="{{ url_for('brenna_gogel') }}">Brenna's Portfolio'</a>
         </div>
         <div class="portfolio-item">
             <div class="portfolio-image">
-                <img src="{{ url_for('static', filename='images/lizzy.jpg') }}" alt="Justin" width="135" height="211">
+                <img src="/static/images/Lizzy.jpg" alt="Lizzy Lohmann">
             </div>
-        <a href="{{ url_for('lizzy_lohmann') }}">Lizzy's Portfolio</a>
+            <a href="{{ url_for('lizzy_lohmann') }}">Lizzy's Portfolio'</a>
         </div>
         <div class="portfolio-item">
             <div class="portfolio-image">
-                <img src="{{ url_for('static', filename='images/Justin.jpg') }}" alt="Justin" width="135" height="211">
+                <img src="/static/images/Justin.jpg" alt="Justin Schumacher">
             </div>
-        <a href="{{ url_for('justin_schumacher') }}">Justin's Portfolio</a>
+            <a href="{{ url_for('justin_schumacher') }}">Justin's Portfolio'</a>
         </div>
     </div>
 
     <div class="footer">
         ECE: 4880 Senior Design
     </div>
-
-
-
-
-
-<!--    <p style="font-size: 20px; color:#1F9AFE;">-->
-<!--        <a href="{{ url_for('justin_schumacher') }}">Justin's Portfolio</a>-->
-<!--        <a href="{{ url_for('lizzy_lohmann') }}">Lizzy's Portfolio</a>-->
-<!--    </p>-->
 </body>
 </html>
