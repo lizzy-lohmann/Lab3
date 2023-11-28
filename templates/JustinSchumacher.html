@@ -4,6 +4,34 @@
     <meta charset="UTF-8">
     <title>Justin's Portfolio</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .left-column {
+            width: 20%;
+            padding-right: 20px;
+        }
+        .right-column {
+            width: 60%;
+            text-align: left;
+        }
+        .left-column img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 <div class="navbar">

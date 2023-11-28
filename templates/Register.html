@@ -30,8 +30,13 @@
     ECE: 4880 Senior Design
 </div>
 
-<form>
+<form action="/register" method="POST">
     <h2>Registration</h2>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
 
