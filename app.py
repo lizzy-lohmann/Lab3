@@ -1,22 +1,23 @@
-import ssl
+from datetime import timedelta
 
 import certifi
-from flask import Flask, render_template, request, redirect, url_for
+from bson import ObjectId
+from flask import Flask, render_template, request, redirect, url_for, session
+from flask_login import LoginManager, UserMixin, login_required
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 app = Flask(__name__, static_folder='templates/static')
+app.secret_key = 'test1'  # Replace with a secure and random string
+app.permanent_session_lifetime = timedelta(minutes=1)
+
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
 
 # Connect to MongoDB
 uri = "mongodb+srv://justin:test@lab3.swakhcz.mongodb.net/?retryWrites=true&w=majority"
 
-
 client = MongoClient(uri, server_api=ServerApi('1'), tls=True, tlsCAFile=certifi.where())
-try:
-    client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
-except Exception as e:
-    print(e)
 
 db = client.get_database('Lab3')  # Specify the database name
 collection = db['users']  # Use 'users' as the collection name
@@ -29,6 +30,18 @@ page_comments = {
     'chase_dittmer': [],
 }
 
+class User(UserMixin):
+    pass
+
+@login_manager.user_loader
+def load_user(user_id):
+    # Retrieve user from the database
+    user_data = collection.find_one({'_id': ObjectId(user_id)})
+    if user_data:
+        user = User()
+        user.id = str(user_data['_id'])
+        return user
+    return None
 
 @app.route('/')
 def index():
@@ -39,24 +52,36 @@ def index():
 
 @app.route('/justin_schumacher')
 def justin_schumacher():
-    comments = page_comments.get('justin_schumacher', [])
-    return render_template('JustinSchumacher.html', comments=comments)
+    if 'username' in session:
+        comments = page_comments.get('justin_schumacher', [])
+        return render_template('JustinSchumacher.html', comments=comments)
+    else:
+        return redirect(url_for('index'))
 
 
 @app.route('/lizzy_lohmann')
 def lizzy_lohmann():
-    comments = page_comments.get('lizzy_lohmann', [])
-    return render_template('LizzyLohmann.html', comments=comments)
+    if 'username' in session:
+        comments = page_comments.get('lizzy_lohmann', [])
+        return render_template('LizzyLohmann.html', comments=comments)
+    else:
+        return redirect(url_for('index'))
 
 @app.route('/brenna_gogel')
 def brenna_gogel():
-    comments = page_comments.get('brenna_gogel', [])
-    return render_template('BrennaGogel.html', comments=comments)
+    if 'username' in session:
+        comments = page_comments.get('brenna_gogel', [])
+        return render_template('BrennaGogel.html', comments=comments)
+    else:
+        return redirect(url_for('index'))
 
 @app.route('/chase_dittmer')
 def chase_dittmer():
-    comments = page_comments.get('chase_dittmer', [])
-    return render_template('ChaseDittmer.html', comments=comments)
+    if 'username' in session:
+        comments = page_comments.get('chase_dittmer', [])
+        return render_template('ChaseDittmer.html', comments=comments)
+    else:
+        return redirect(url_for('index'))
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -88,9 +113,20 @@ def register():
 
     # If the request method is GET, render the registration form
     return render_template('register.html')
-@app.route('/login')
+
+
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    # Your code here
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        user = collection.find_one({'username': username, 'password': password})
+
+        if user:
+            session.permanent = True
+            session['username'] = username
+            return redirect(url_for('index'))
+
     return render_template('login.html')
 
 @app.route('/add_comment/<page>', methods=['POST'])
