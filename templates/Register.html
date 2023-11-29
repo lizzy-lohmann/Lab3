@@ -35,19 +35,24 @@
         ECE: 4880 Senior Design
     </div>
 
-    <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+    <form action="/register" method="POST">
+    <h2>Registration</h2>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <p>                      </p>
-        <input type="checkbox" onclick="showPassword()"> Show Password
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
 
-        <br><br>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
 
-        <input type="submit" value="Register">
-    </form>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <input type="checkbox" onclick="showPassword()"> Show Password
+
+    <br><br>
+
+    <input type="submit" value="Register">
+</form>
 
     <script>
         function showPassword() {
