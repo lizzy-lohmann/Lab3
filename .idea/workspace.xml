@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea4b93e0-b5f6-4b45-989c-ee3d29d6d4ed" name="Changes" comment="added comment section">
+    <list default="true" id="ea4b93e0-b5f6-4b45-989c-ee3d29d6d4ed" name="Changes" comment="fixed footer to stay at bottom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/BrennaGogel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/BrennaGogel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ChaseDittmer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ChaseDittmer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/JustinSchumacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/JustinSchumacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/LizzyLohmann.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/LizzyLohmann.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,8 +201,20 @@
       <option name="project" value="LOCAL" />
       <updated>1701190436826</updated>
     </task>
+<<<<<<< HEAD
+    <task id="LOCAL-00008" summary="fixed footer to stay at bottom">
+      <option name="closed" value="true" />
+      <created>1701210251628</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701210251628</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+=======
     <option name="localTasksCounter" value="8" />
 
+>>>>>>> f35094291a8d4adee8b0c604ba5d3514addbba9f
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +229,8 @@
     <MESSAGE value="messing with picture" />
     <MESSAGE value="fixed layout and links" />
     <MESSAGE value="added comment section" />
-    <option name="LAST_COMMIT_MESSAGE" value="added comment section" />
+    <MESSAGE value="fixed footer to stay at bottom" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed footer to stay at bottom" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Lab3$app.coverage" NAME="app Coverage Results" MODIFIED="1701191015659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
