@@ -1,13 +1,15 @@
 body {
     background-color: white;
     text-align: center;
-    top-margin: 50; /* Remove default margin to prevent spacing */
+    top-margin: 50;
+    bottom-margin: 60px;
 }
 
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Aligns children with space between */
+    justify-content: space-between;
+    align-items: center;
     background-color: hsl(195, 60%, 67%);
     padding: 10px;
     font-size: 25px;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Brenna Gogel</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,17 +14,17 @@
             padding: 20px;
         }
         .left-column {
-            width: 20%; 
-            padding-right: 20px; 
+            width: 15%;
+            padding-right: 30px;
         }
         .right-column {
-            width: 60%; 
+            width: 60%;
             text-align: left; 
         }
         .left-column img {
-            width: 100%; 
+            width: 100%;
             height: auto;
-            display: block; 
+            display: block;
         }
 
         body, html {

@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea4b93e0-b5f6-4b45-989c-ee3d29d6d4ed" name="Changes" comment="Changed to a publicly hosted database.">
+    <list default="true" id="ea4b93e0-b5f6-4b45-989c-ee3d29d6d4ed" name="Changes" comment="added comment section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/BrennaGogel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/BrennaGogel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ChaseDittmer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ChaseDittmer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/JustinSchumacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/JustinSchumacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/LizzyLohmann.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/LizzyLohmann.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +32,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;bgogel02&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d17623c6-b542-41a1-a6fd-a895c4b75b09" />
+        <option name="url" value="https://github.com/lizzy-lohmann/Lab3.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -44,7 +62,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/GitHub/Lab3/templates/static/images&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lizzy&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bgogel02/Documents/GitHub/Lab3/templates&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -55,14 +74,47 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
       <recent name="C:\GitHub\Lab3\templates\static\images" />
       <recent name="C:\GitHub\Lab3\templates\static" />
       <recent name="C:\GitHub\Lab3" />
       <recent name="C:\GitHub\Lab3\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/static/images" />
+      <recent name="$PROJECT_DIR$/images" />
       <recent name="C:\GitHub\Lab3" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lab3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -93,6 +145,70 @@
       <updated>1701191246718</updated>
     </task>
     <option name="localTasksCounter" value="3" />
+
+      <workItem from="1700151267092" duration="1839000" />
+      <workItem from="1701190939452" duration="224000" />
+      <workItem from="1701191187701" duration="1018000" />
+      <workItem from="1701192976796" duration="1804000" />
+    </task>
+    <task id="LOCAL-00001" summary="Fixed layout in python">
+      <option name="closed" value="true" />
+      <created>1700177175333</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700177175333</updated>
+    </task>
+    <task id="LOCAL-00002" summary="messing with picture">
+      <option name="closed" value="true" />
+      <created>1700177721051</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700177721051</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed layout and links">
+      <option name="closed" value="true" />
+      <created>1701189633819</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701189633819</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fixed layout and links">
+      <option name="closed" value="true" />
+      <created>1701189786448</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701189786448</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fixed layout and links">
+      <option name="closed" value="true" />
+      <created>1701189972430</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701189972430</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added comment section">
+      <option name="closed" value="true" />
+      <created>1701190375846</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701190375846</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added comment section">
+      <option name="closed" value="true" />
+      <created>1701190436826</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701190436826</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,5 +218,15 @@
     <MESSAGE value="Added registering of new user. Also throws error if user already exists." />
     <MESSAGE value="Changed to a publicly hosted database." />
     <option name="LAST_COMMIT_MESSAGE" value="Changed to a publicly hosted database." />
+
+    <MESSAGE value="Fixed layout in python" />
+    <MESSAGE value="messing with picture" />
+    <MESSAGE value="fixed layout and links" />
+    <MESSAGE value="added comment section" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comment section" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lab3$app.coverage" NAME="app Coverage Results" MODIFIED="1701191015659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+
   </component>
 </project>

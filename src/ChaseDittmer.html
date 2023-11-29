@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Chase Dittmer</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <style>
         body {
             font-family: Arial, sans-serif;
         }
         .content {
             display: flex;
-            justify-content: center; /* This will center the content area on the page */
+            justify-content: center;
             padding: 20px;
         }
         .left-column {
-            /* Adjust the width if you need to make the image smaller or larger */
-            width: 20%; /* Example percentage */
-            padding-right: 20px; /* Add some space between the image and the text */
+            width: 15%;
+            padding-right: 30px;
         }
         .right-column {
-            width: 60%; /* Example percentage */
-            text-align: left; /* Aligns the text to the left */
+            width: 60%;
+            text-align: left;
         }
         .left-column img {
-            width: 100%; /* Makes the image take full width of the container */
+            width: 100%;
             height: auto;
-            display: block; /* Ensures no extra space below the image */
+            display: block;
         }
 
         body, html {

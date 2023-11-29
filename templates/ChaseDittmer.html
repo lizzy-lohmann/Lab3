@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Chase Dittmer</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <style>
         body {
             font-family: Arial, sans-serif;
         }
         .content {
             display: flex;
-            justify-content: center; /* This will center the content area on the page */
+            justify-content: center;
             padding: 20px;
+            flex: 1;
         }
         .left-column {
-            /* Adjust the width if you need to make the image smaller or larger */
-            width: 20%; /* Example percentage */
-            padding-right: 20px; /* Add some space between the image and the text */
+            width: 15%;
+            padding-right: 30px;
         }
         .right-column {
-            width: 60%; /* Example percentage */
-            text-align: left; /* Aligns the text to the left */
+            width: 60%;
+            text-align: left;
         }
         .left-column img {
-            width: 100%; /* Makes the image take full width of the container */
+            width: 100%;
             height: auto;
-            display: block; /* Ensures no extra space below the image */
+            display: block;
         }
 
         body, html {
@@ -36,23 +36,35 @@
 </head>
 <body>
 <div class="navbar">
-
-    <a href="index.html">Home</a>
-    <div class="right-links">
-        <a href="register.html">Register</a>
-        <a class="login" href="login.html">Login In</a>
+        <a href="{{ url_for('index') }}">Home</a>
+        <div class="right-links">
+            <a href="{{ url_for('register') }}">Register</a>
+            <a class="login" href="{{ url_for('login') }}">Login In</a>
+        </div>
     </div>
-</div>
 <h1>Chase Dittmer</h1>
 <div class="content">
     <div class="left-column">
-        <img src="/images/Chase.jpg" alt="Chase Dittmer" >
+        <img src="/static/images/Chase.jpg" alt="Chase Dittmer" >
     </div>
     <div class="right-column">
         <p>bluh bluh </p>
         </div>
 </div>
-</div>
+<form action="{{ url_for('add_comment', page='chase_dittmer') }}" method="post">
+        <label for="comment">Add a comment:</label>
+        <textarea name="comment" id="comment" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Display Comments -->
+    <h2>Comments:</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment }}</li>
+        {% endfor %}
+    </ul>
 <div class="footer">
     ECE: 4880 Senior Design
       </div>
