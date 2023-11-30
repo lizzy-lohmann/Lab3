@@ -2,7 +2,7 @@ from datetime import timedelta
 
 import certifi
 from bson import ObjectId
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_login import LoginManager, UserMixin, login_required
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
@@ -56,7 +56,7 @@ def justin_schumacher():
         comments = page_comments.get('justin_schumacher', [])
         return render_template('JustinSchumacher.html', comments=comments)
     else:
-        return redirect(url_for('index'))
+        return render_template('index.html', error="Please log in before accessing profile pages.")
 
 
 @app.route('/lizzy_lohmann')
@@ -65,7 +65,7 @@ def lizzy_lohmann():
         comments = page_comments.get('lizzy_lohmann', [])
         return render_template('LizzyLohmann.html', comments=comments)
     else:
-        return redirect(url_for('index'))
+        return render_template('index.html', error="Please log in before accessing profile pages.")
 
 @app.route('/brenna_gogel')
 def brenna_gogel():
@@ -73,7 +73,7 @@ def brenna_gogel():
         comments = page_comments.get('brenna_gogel', [])
         return render_template('BrennaGogel.html', comments=comments)
     else:
-        return redirect(url_for('index'))
+        return render_template('index.html', error="Please log in before accessing profile pages.")
 
 @app.route('/chase_dittmer')
 def chase_dittmer():
@@ -81,7 +81,7 @@ def chase_dittmer():
         comments = page_comments.get('chase_dittmer', [])
         return render_template('ChaseDittmer.html', comments=comments)
     else:
-        return redirect(url_for('index'))
+        return render_template('index.html', error="Please log in before accessing profile pages.")
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -114,6 +114,10 @@ def register():
     # If the request method is GET, render the registration form
     return render_template('register.html')
 
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('index'))
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -126,6 +130,8 @@ def login():
             session.permanent = True
             session['username'] = username
             return redirect(url_for('index'))
+        else:
+            return render_template('login.html', error='User does not exist.')
 
     return render_template('login.html')
 

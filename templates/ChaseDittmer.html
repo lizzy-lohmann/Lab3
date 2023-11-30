@@ -39,7 +39,11 @@
         <a href="{{ url_for('index') }}">Home</a>
         <div class="right-links">
             <a href="{{ url_for('register') }}">Register</a>
-            <a class="login" href="{{ url_for('login') }}">Login In</a>
+            {% if 'username' in session %}
+                <a class="login" href="{{ url_for('logout') }}">Log Out</a>
+            {% else %}
+                <a class="login" href="{{ url_for('login') }}">Log In</a>
+            {% endif %}
         </div>
     </div>
 <h1>Chase Dittmer</h1>
