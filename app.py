@@ -1,14 +1,13 @@
 from datetime import timedelta
-
 import certifi
 from bson import ObjectId
-from flask import Flask, render_template, request, redirect, url_for, session, flash
+from flask import Flask, render_template, request, redirect, url_for, session, flash, abort
 from flask_login import LoginManager, UserMixin, login_required
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 app = Flask(__name__, static_folder='templates/static')
-app.secret_key = 'test1'  # Replace with a secure and random string
+app.secret_key = 'test1'
 app.permanent_session_lifetime = timedelta(minutes=1)
 
 login_manager = LoginManager(app)
@@ -21,6 +20,8 @@ client = MongoClient(uri, server_api=ServerApi('1'), tls=True, tlsCAFile=certifi
 
 db = client.get_database('Lab3')  # Specify the database name
 collection = db['users']  # Use 'users' as the collection name
+comments_collection = db['comments']
+
 
 # Initialize a dictionary to store comments for each page
 page_comments = {
@@ -52,34 +53,58 @@ def index():
 
 @app.route('/justin_schumacher')
 def justin_schumacher():
+    comments_document = comments_collection.find_one({'page': 'justin_schumacher'})
+
+    if comments_document:
+        page_comments['justin_schumacher'] = comments_document.get('comments', [])
+    else:
+        # Handle the case where no comments document is found
+        page_comments['justin_schumacher'] = []
     if 'username' in session:
-        comments = page_comments.get('justin_schumacher', [])
-        return render_template('JustinSchumacher.html', comments=comments)
+        return render_template('JustinSchumacher.html', comments=page_comments.get('justin_schumacher', []))
     else:
         return render_template('index.html', error="Please log in before accessing profile pages.")
 
 
 @app.route('/lizzy_lohmann')
 def lizzy_lohmann():
+    comments_document = comments_collection.find_one({'page': 'lizzy_lohmann'})
+
+    if comments_document:
+        page_comments['lizzy_lohmann'] = comments_document.get('comments', [])
+    else:
+        # Handle the case where no comments document is found
+        page_comments['lizzy_lohmann'] = []
     if 'username' in session:
-        comments = page_comments.get('lizzy_lohmann', [])
-        return render_template('LizzyLohmann.html', comments=comments)
+        return render_template('LizzyLohmann.html', comments=page_comments.get('lizzy_lohmann', []))
     else:
         return render_template('index.html', error="Please log in before accessing profile pages.")
 
 @app.route('/brenna_gogel')
 def brenna_gogel():
+    comments_document = comments_collection.find_one({'page': 'brenna_gogel'})
+
+    if comments_document:
+        page_comments['brenna_gogel'] = comments_document.get('comments', [])
+    else:
+        # Handle the case where no comments document is found
+        page_comments['brenna_gogel'] = []
     if 'username' in session:
-        comments = page_comments.get('brenna_gogel', [])
-        return render_template('BrennaGogel.html', comments=comments)
+        return render_template('BrennaGogel.html', comments=page_comments.get('brenna_gogel', []))
     else:
         return render_template('index.html', error="Please log in before accessing profile pages.")
 
 @app.route('/chase_dittmer')
 def chase_dittmer():
+    comments_document = comments_collection.find_one({'page': 'chase_dittmer'})
+
+    if comments_document:
+        page_comments['chase_dittmer'] = comments_document.get('comments', [])
+    else:
+        # Handle the case where no comments document is found
+        page_comments['chase_dittmer'] = []
     if 'username' in session:
-        comments = page_comments.get('chase_dittmer', [])
-        return render_template('ChaseDittmer.html', comments=comments)
+        return render_template('ChaseDittmer.html', comments=page_comments.get('chase_dittmer', []))
     else:
         return render_template('index.html', error="Please log in before accessing profile pages.")
 
@@ -143,6 +168,13 @@ def add_comment(page):
     comments = page_comments.get(page, [])
     comments.append(new_comment)
     page_comments[page] = comments
+
+    # Save the comments to MongoDB
+    comments_collection.update_one(
+        {'page': page},
+        {'$set': {'comments': comments}},
+        upsert=True
+    )
 
     # Redirect to the specific page with the 'page' parameter
     return redirect(url_for(page, page=page))
